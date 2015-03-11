@@ -2,6 +2,9 @@ var http = require('http');
 var express = require( 'express' );
 var morgan = require('morgan');
 var swig = require('swig');
+
+// var data = require('./tweetBank');
+
 var app = express();
 var server = http.createServer();
 
