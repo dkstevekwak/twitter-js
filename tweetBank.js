@@ -1,4 +1,5 @@
 var _ = require('underscore');
+
 var data = [];
 
 var add = function (name, text) {
