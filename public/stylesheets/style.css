@@ -54,6 +54,7 @@ code {
 }
 .content {
   margin-left: 60px;
+  height: 70px;
 }
 .content .by {
   font-weight: bold;

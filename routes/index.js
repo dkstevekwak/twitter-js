@@ -8,5 +8,19 @@ router.get('/', function (req, res) {
   res.render( 'index', { title: 'Twitter.js', tweets: tweets } );
 });
 
+router.get('/users/:name', function(req, res) {
+  var name = req.params.name;
+  var list = tweetBank.find( {name: name} );
+  res.render( 'index', { title: 'Twitter.js - Posts by '+name, tweets: list} );
+});
+
+router.get('/users/:name/tweets/:id', function(req, res) {
+  var name = req.params.name;
+  var idN = req.params.id;
+  var list = tweetBank.find( {id: idN} );
+  console.log(list);
+  res.render( 'index', { title: 'Twitter.js - Posts by '+name, tweets: list} );
+});
+
 
 module.exports = router;
