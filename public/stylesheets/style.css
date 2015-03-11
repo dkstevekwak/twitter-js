@@ -50,6 +50,7 @@ code {
   height: 48px;
   width: 48px;
   content:url("http://lorempixel.com/48/48");
+  margin-right: 10px;
 }
 .content {
   margin-left: 60px;
@@ -57,3 +58,33 @@ code {
 .content .by {
   font-weight: bold;
 }
+
+.tweet-list {
+  list-style-type: none;
+  display: inline-block;
+  clear: left;
+}
+
+.tweeter {
+  font-weight: bold;
+  margin-right: 10px;
+  margin-left: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
