@@ -3,6 +3,7 @@ var express = require( 'express' );
 var morgan = require('morgan');
 var swig = require('swig');
 var routes = require('./routes');
+var bodyParser = require('body-parser');
 
 // var data = require('./tweetBank');
 
@@ -12,13 +13,17 @@ var server = http.createServer();
 var people = [ {name: 'Full'}, {name: 'Stacker'}, {name: 'Son'} ];
 
 
-
+//Turn the server on
 server.on('request', app);
-
+//Check other directories for file requests
+app.use(express.static(__dirname + '/public'));
+//Set up our logging
 app.use(morgan('dev'));
 
-app.use(express.static(__dirname + '/public'));
+//Parse body of message if it exists
+app.use(bodyParser.urlencoded());
 
+// hand off to the Router
 app.use('/', routes);
 
 
